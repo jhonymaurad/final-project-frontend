@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Fragment} from 'react';
 import './App.css';
+
+import { Container } from "reactstrap";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+
+import NavigationBar from "./components/NavigationBar";
+import contact from './pages/contact';
+import about from './pages/about';
+import home from './pages/home';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Router>
+        <NavigationBar />
+        <div className="App">
+          <Container>
+            <Switch>
+              <Route exact path="/"  />
+              <Route exact path="/about" />
+              <Route path="/contact" component={contact} />
+            </Switch>
+          </Container>
+        </div>
+      </Router>
+    </Fragment>
   );
 }
 
