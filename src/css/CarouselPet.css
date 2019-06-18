@@ -1,0 +1,48 @@
+.container{
+    height: 500px;
+    margin-top: 20px;
+    background: white;
+}
+.slide{ 
+    height: 480px;
+    background-size: cover;
+}
+.slide1{
+    background-image: url('../assets/slide1.jpg');  
+}
+.slide2{
+    background-image: url('../assets/slide2.jpg');
+}
+.slide3{
+    background-image: url('../assets/slide3.jpg');
+}
+.slide4{
+    background-image: url('../assets/slide4.jpg');
+}
+.container li{
+    background-color: grey;
+    border: none;
+    height: 10px;
+    width: 30px;
+}
+.container li button{
+    border: none;
+    color: white;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.main-text{
+    color: white;
+}
+.sub-text{
+    color: azure;
+}
+.button-container{
+    padding: 10px;
+    margin: 0 50px;
+    background: rgb(190, 200, 200);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
