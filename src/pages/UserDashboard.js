@@ -1,18 +1,16 @@
-import React, { Fragment } from "react";
-import {
-  Form,
-  FormGroup,
-  Label,
-  Card,
-  CardText,
-  CardBody,
-  Jumbotron,
-  Container,
-  Row
-} from "reactstrap";
+import React, { Fragment, useContext } from "react";
+import { Jumbotron, Container, Button, Row, Col } from "reactstrap";
 import "../css/UserDashboard.css";
 
+import { AccountDetailsView } from "../views/AccountDetailsView";
+import { FavoritesView } from "../views/FavoritesView";
+import { SubmittedFormsViews } from "../views/SubmittedFormsViews";
+
+import { Context } from "../Store/Context";
+
 export const UserDashboard = () => {
+  const { dispatch } = useContext(Context);
+
   return (
     <Fragment>
       <Jumbotron fluid id="dashboard-jumbotron-container">
@@ -20,28 +18,29 @@ export const UserDashboard = () => {
       </Jumbotron>
       <div className="user-dashboard-container">
         <Container>
-          <h1 style={{ marginTop: "1rem" }}>WELCOME USER</h1>
-          <div className="account-details">
-            <h3>Account Details:</h3>
-            <Card>
-              <CardBody>
-                <CardText>
-                  <Row>
-                    <h5 style={{ paddingRight: "0.3rem" }}>First Name: </h5>
-                    John
-                  </Row>
-                  <Row>
-                    <h5 style={{ paddingRight: "0.3rem" }}>Last Name: </h5>
-                    Doe
-                  </Row>
-                  <Row>
-                    <h5 style={{ paddingRight: "0.3rem" }}>Email: </h5>
-                    john.doe@gmail.com
-                  </Row>
-                </CardText>
-              </CardBody>
-            </Card>
-          </div>
+          <Row style={{ marginTop: "0.5rem" }}>
+            <Col sm="12" md={{ size: 6, offset: 3 }}>
+              <h1>WELCOME USER</h1>
+            </Col>
+            <Col>
+              <Button
+                color="secondary"
+                onClick={() => {
+                  dispatch({
+                    type: "SIGN_OUT",
+                    payload: false
+                  });
+                }}
+              >
+                Sign Out
+              </Button>
+            </Col>
+          </Row>
+          <AccountDetailsView />
+          <br />
+          <FavoritesView />
+          <br />
+          <SubmittedFormsViews />
         </Container>
       </div>
     </Fragment>
