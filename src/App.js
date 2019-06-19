@@ -1,6 +1,5 @@
 import React,{Fragment} from 'react';
 import './App.css';
-
 import { Container } from "reactstrap";
 import {
   BrowserRouter as Router,
