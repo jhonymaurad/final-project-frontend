@@ -8,10 +8,10 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
-
+import CarouselPet from './components/CarouselPet';
+import About from './components/about';
 import NavigationBar from "./components/NavigationBar";
 import contact from './pages/contact';
-import about from './pages/about';
 import home from './pages/home';
 
 
@@ -23,8 +23,8 @@ function App() {
         <div className="App">
           <Container>
             <Switch>
-              <Route exact path="/"  />
-              <Route exact path="/about" />
+              <Route exact path="/" component={CarouselPet} />
+              <Route exact path="/about" component={About} />
               <Route path="/contact" component={contact} />
             </Switch>
           </Container>
