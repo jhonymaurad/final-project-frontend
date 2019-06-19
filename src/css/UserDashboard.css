@@ -1,0 +1,60 @@
+#dashboard-jumbotron-container {
+  margin-bottom: 0;
+  background: url("https://bogatiurns.com/wp-content/uploads/2017/05/pets.jpg")
+    fixed center no-repeat;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.8);
+  height: 25rem;
+  position: relative;
+  z-index: -2;
+}
+
+#dashboard-jumbotron-container .overlay {
+  background-color: #000;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.user-dashboard-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right top,
+    #8a108a,
+    #9b299b,
+    #ad3dad,
+    #bf4fbf,
+    #d161d1,
+    #da64da,
+    #e366e3,
+    #ec69ec,
+    #ed5ced,
+    #ef4def,
+    #f03bf0,
+    #f11ff1
+  );
+}
+
+.user-dashboard-container .container {
+  text-align: center;
+}
+
+.user-dashboard-container .card {
+  background-color: rgba(51, 51, 77, 0.05);
+  border-width: 0.2rem;
+}
+
+.user-dashboard-container .card-body {
+  display: flex;
+  justify-content: center;
+}
+
+.account-details {
+  text-align: left;
+}
