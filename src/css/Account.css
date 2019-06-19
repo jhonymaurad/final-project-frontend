@@ -1,0 +1,32 @@
+.account-main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right top,
+    #8a108a,
+    #9b299b,
+    #ad3dad,
+    #bf4fbf,
+    #d161d1,
+    #da64da,
+    #e366e3,
+    #ec69ec,
+    #ed5ced,
+    #ef4def,
+    #f03bf0,
+    #f11ff1
+  );
+}
+
+.account-main-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.account-main-container .card {
+  background-color: rgba(51, 51, 77, 0.05);
+  border-width: 0.2rem;
+}
