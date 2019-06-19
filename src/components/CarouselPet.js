@@ -40,7 +40,7 @@ const CarouselPet = () => {
       </Carousel>
 
       <div className="button-container">
-        <Button ghost>Adopt a Pet</Button>
+        <Button ghost href="http://localhost:3000/adoptDogs">Adopt a Pet</Button>
         <Button ghost>Rehome a Pet</Button>
       </div>
     </Container>

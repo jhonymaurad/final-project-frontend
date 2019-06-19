@@ -4,12 +4,10 @@ import "../css/about.css";
 import Logo from "../assets/logo.png";
 import about1 from "../assets/about1.jpg";
 import about2 from "../assets/about2.jpg";
-import DogsForAdoption from "../views/DogsForAdoption";
 
 export default () => (
   <Container>
     <div className="welcome-container">
-      <DogsForAdoption />
       <img src={Logo} alt="logo" />
       <h1 className="title">About us</h1>
       <h2 className="second-line">

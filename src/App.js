@@ -13,6 +13,7 @@ import NavigationBar from "./components/NavigationBar";
 import contact from "./pages/contact";
 import { Account } from "./pages/Account";
 import { UserDashboard } from "./pages/UserDashboard";
+import DogsForAdoption from './views/DogsForAdoption';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/contact" component={contact} />
             <Route exact path="/account" component={Account} />
             <Route exact path="/account/dashboard" component={UserDashboard} />
+            <Route exact path="/adoptDogs" component={DogsForAdoption} /> 
           </Switch>
         </div>
       </Router>
