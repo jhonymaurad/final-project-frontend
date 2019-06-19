@@ -9,7 +9,7 @@ function onChange(a, b, c) {
 const CarouselPet =() =>{
 return(
   <div>
-    <Carousel className='container' afterChange={onChange} >
+    <Carousel className='container' afterChange={onChange} autoplay >
       <div className="slide slide1">
         <h1 className='main-text'>Where Pets Find Their People</h1><br></br> <br></br> <br></br> <br></br>
         <h3 className='sub-text'>Thousands of adoptable pets are looking for people. People like you.</h3>

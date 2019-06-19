@@ -1,8 +1,5 @@
 .welcome-container {
-	margin: 100px 250px 200px 500px;
-	max-width: 600px;
-	margin-left: 29vw;
-	margin-right: 29vw;
+	margin: 100px 50px 50px 50px;
 }
 
 .title {
@@ -19,4 +16,9 @@
 	font-family: 'Montserrat';
 	font-size: 20px;
 	line-height: 1.5;
+}
+.aboutImg{
+    width:400px; 
+    height: 350px;
+    border-radius: 30%;
 }
