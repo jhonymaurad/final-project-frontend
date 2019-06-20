@@ -9,7 +9,7 @@ export const NavigationBar = () => {
   return (
     <Navbar fixed="top" expand="md">
       <Link to="/" style={{ fontSize: "2rem" }}>
-        <a>PetConnect</a>
+        PetConnect
       </Link>
       <NavbarToggler
         onClick={() => {
