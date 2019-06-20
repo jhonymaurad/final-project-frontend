@@ -18,6 +18,7 @@ import { UserDashboard } from "./pages/UserDashboard";
 import DogsForAdoption from './views/DogsForAdoption';
 
 import { Context } from "./Store/Context";
+import RehomePet from "./views/RehomePet";
 
 function App() {
   const { state } = useContext(Context);
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={contact} />
             <Route exact path="/adoptDogs" component={DogsForAdoption} /> 
+            <Route exact path="/reHome" component={RehomePet} />
             <Route
               exact
               path="/account"
