@@ -4,7 +4,8 @@ import { Reducer } from "./Reducer";
 export const Context = createContext();
 
 const initialState = {
-  isSignedIn: true
+  isSignedIn: true,
+  userData: []
 };
 
 export const ContextProvider = props => {

@@ -18,7 +18,7 @@ export const UserDashboard = () => {
       </Jumbotron>
       <div className="user-dashboard-container">
         <Container>
-          <Row style={{ marginTop: "0.5rem" }}>
+          <Row style={{ marginTop: "1rem" }}>
             <Col sm="12" md={{ size: 6, offset: 3 }}>
               <h1>WELCOME USER</h1>
             </Col>
