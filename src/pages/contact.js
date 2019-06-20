@@ -61,8 +61,8 @@ const Contact = () => {
                             <Col key={item.name+index} sm="3">
                                 <Card 
                                 style={{
-                                    background: "white",
-                                    color: "rgb(223, 105, 223)",
+                                    background: "rgb(223, 105, 223)",
+                                    color: "white",
                                     marginTop: "0.75rem",
                                     minHeight: "24rem",
                                     border: '1px solid rgb(223, 105, 223)'

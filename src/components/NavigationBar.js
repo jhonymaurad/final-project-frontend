@@ -11,7 +11,7 @@ export const NavigationBar = () => {
     <Navbar fixed="top" expand="md">
       <Link to="/" style={{ fontSize: "2rem" }}>
         <img src={Logo} style={{height: '40px', width:'60px'}} alt="navigation bar logo" />
-        PetConnect
+        <a>PetConnect</a>
       </Link>
       <NavbarToggler
         onClick={() => {
