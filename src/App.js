@@ -1,4 +1,6 @@
-import React,{Fragment} from 'react';
+
+import React, { Fragment, useContext } from "react";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -9,13 +11,17 @@ import './App.css';
 
 import CarouselPet from "./components/CarouselPet";
 import About from "./components/about";
-import NavigationBar from "./components/NavigationBar";
+import { NavigationBar } from "./components/NavigationBar";
 import contact from "./pages/contact";
 import { Account } from "./pages/Account";
 import { UserDashboard } from "./pages/UserDashboard";
 import DogsForAdoption from './views/DogsForAdoption';
 
+import { Context } from "./Store/Context";
+
 function App() {
+  const { state } = useContext(Context);
+
   return (
     <Fragment>
       <Router>
@@ -25,9 +31,12 @@ function App() {
             <Route exact path="/" component={CarouselPet} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={contact} />
-            <Route exact path="/account" component={Account} />
-            <Route exact path="/account/dashboard" component={UserDashboard} />
             <Route exact path="/adoptDogs" component={DogsForAdoption} /> 
+            <Route
+              exact
+              path="/account"
+              component={state.isSignedIn ? UserDashboard : Account}
+            />
           </Switch>
         </div>
       </Router>
