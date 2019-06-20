@@ -22,8 +22,18 @@ async function getDogs(token) {
     return resp.data;
 }
 
+async function getCats(token) {
+  const resp = await axios({
+    url: 'https://api.petfinder.com/v2/animals?type=cat&page=1',
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+  return resp.data;
+}
+
 export {
-    getDogs, login
+    getDogs, login, getCats
 }
 
 

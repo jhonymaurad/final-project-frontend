@@ -52,7 +52,6 @@ const CarouselPet = () => {
         <Link to="/reHome">
           <Button ghost>Rehome a Pet</Button>
         </Link>
-        
       </div>
     </Container>
   );
