@@ -1,7 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
+import { Context } from "../Store/Context";
+
 export const RegisterView = ({ props }) => {
+  const { dispatch } = useContext(Context);
+
   return (
     <Fragment>
       <Form>
@@ -34,7 +38,11 @@ export const RegisterView = ({ props }) => {
       <Button
         color="primary"
         onClick={() => {
-          props.history.push("/account/dashboard");
+          dispatch({
+            type: "SIGN_IN",
+            payload: true
+          });
+          props.history.push("/account/");
         }}
       >
         Register
