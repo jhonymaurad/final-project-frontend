@@ -1,6 +1,8 @@
 import React from 'react';
-import {login, getDogs } from '../components/petFinderServices';
-import dogAvatar from '../assets/dog-avatar.png';
+import {login, getDogs, getCats } from '../components/petFinderServices';
+import '../css/DogsforAdoption.css';
+import PetList from '../components/PetList';
+import { Button } from 'antd';
 
 
 export default class DogsForAdoption extends React.Component{
@@ -8,6 +10,8 @@ export default class DogsForAdoption extends React.Component{
         super(props);
         this.state = {
             dogs:[], 
+            cats:[],
+            view: '',
             token: ''
         }
     }
@@ -21,32 +25,36 @@ export default class DogsForAdoption extends React.Component{
     getAllDogs = async ()=>{
         const dogs = await getDogs(this.state.token);
         console.log(dogs.animals);
-        this.setState({dogs: dogs.animals});
+        this.setState({dogs: dogs.animals, view:'dogs'});
+    }
+
+    getAllCats = async ()=>{
+        const cats = await getCats(this.state.token);
+        this.setState({cats: cats.animals, view: 'cats'});
     }
 
     render(){
         return(
             <div className='adoption-container'>
-                <h1>Type of Animal: </h1>
-                <button onClick={this.getAllDogs}>get dogs</button>
-
-                <div className='dog-list-container'>
-                    <ul>
-                        {this.state.dogs.map(dog =>(
-                            <div key={dog.id}>
-                                {
-                                    dog.photos.length !== 0 ? <img src={dog.photos[0].medium} alt={dog.type}></img> : 
-                                    <img style={{width: '150px', height: '150px'}} src={dogAvatar} alt='dog avatar'></img>
-                                }
-                                
-                                {/* {console.log(dog.photos[0])} */}
-                                <h3>{dog.name}</h3>
-                            </div>
-                        ))}
-                    </ul>
-
-
+                <h1>When You’re Ready, Start Here: </h1>
+                <p>Welcoming a pet into your family is a big decision, but chances are good that 
+                your life will be better than ever with the companionship of your new best friend. 
+                </p>
+                <div className='button-container'>
+                    <Button type="primary" icon="search" size="large" onClick={this.getAllDogs}>
+                    Find a Dog
+                    </Button>
+                    <Button type="primary" icon="search" size="large"onClick={this.getAllCats}>
+                    Find a Cat
+                    </Button>
+                    <Button type="primary" icon="search" size="large" >
+                    Find Other Pets
+                    </Button>
                 </div>
+
+                {
+                    this.state.view === 'dogs' ? <PetList animals={this.state.dogs}/> : <PetList animals={this.state.cats}/>
+                }
             </div>
         )  
     }

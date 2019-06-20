@@ -13,11 +13,11 @@
 
 .welcome-text {
   font-family: "Montserrat";
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .aboutImg {
   width: 400px;
-  height: 350px;
+  height: 300px;
   border-radius: 30%;
 }
