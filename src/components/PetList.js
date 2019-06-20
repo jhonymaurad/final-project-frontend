@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/DogsforAdoption.css';
 import dogAvatar from '../assets/dog-avatar.png';
+import { Button, Icon } from 'antd';
 
 const PetList = (props) => {
     return(
@@ -18,6 +19,7 @@ const PetList = (props) => {
                         <h4>Age: {dog.age}</h4>
                         <h5>Description</h5>
                         <p>{dog.description}</p>
+                        <Button type="primary" size="large" icon="heart" onClick={console.log('test')} />
                     </div>
                 ))}
             </ul>
