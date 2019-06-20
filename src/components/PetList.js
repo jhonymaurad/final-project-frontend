@@ -6,7 +6,7 @@ const PetList = (props) => {
     return(
         <div >
              <ul className='dog-list-container'>
-                {props.dogs.map(dog =>(
+                {props.animals.map(dog =>(
                     <div key={dog.id} className='dog-card'>
                         <a target="_blank" rel="noopener noreferrer" href={dog.url}>
                             {
