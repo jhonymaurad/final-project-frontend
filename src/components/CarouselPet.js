@@ -3,7 +3,13 @@ import { Carousel, Button } from "antd";
 import { Container } from "reactstrap";
 import "antd/dist/antd.css";
 import "../css/CarouselPet.css";
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+  Link
+} from "react-router-dom";
 const CarouselPet = () => {
   return (
     <Container>
@@ -39,9 +45,13 @@ const CarouselPet = () => {
         </div>
       </Carousel>
 
-      <div className="button-container-carousel">
-        <Button ghost href="http://localhost:3000/adoptDogs">Adopt a Pet</Button>
-        <Button ghost>Rehome a Pet</Button>
+      <div className="button-container">
+        <Link to="/adoptDogs">
+          <Button ghost>Adopt a Pet</Button>
+        </Link>
+        <Link to="/reHome">
+          <Button ghost>Rehome a Pet</Button>
+        </Link>
       </div>
     </Container>
   );

@@ -47,3 +47,12 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+/* added css for pet donator form */
+.d-form-container{
+  
+  position: relative;
+  padding-bottom: 9rem;
+  height: 100vh;
+}
+
