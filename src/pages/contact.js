@@ -37,6 +37,14 @@ const items = [
         title: 'General Manager',
         phone: '444-444-4444',
         email: 'verylongemail@PetConnect.com'
+    },
+    {
+        src: 'https://apprecs.org/ios/images/app-icons/256/b0/1156908976.jpg',
+        altText: 'member5',
+        name: 'Rafael Perez',
+        title: 'General Manager',
+        phone: '555-555-5555',
+        email: 'verylongemail@PetConnect.com'
     }
     ];
     

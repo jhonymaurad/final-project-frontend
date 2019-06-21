@@ -39,7 +39,7 @@
 .sub-text {
   color: azure;
 }
-.button-container-carousel {
+.button-container {
   padding: 10px;
   margin: 10px 10px 0 10px;
   background: rgb(223, 105, 223);
@@ -50,7 +50,6 @@
 
 /* added css for pet donator form */
 .d-form-container{
-  
   position: relative;
   padding-bottom: 9rem;
   height: 100vh;
