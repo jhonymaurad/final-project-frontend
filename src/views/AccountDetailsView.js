@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card, CardBody, Row } from "reactstrap";
+import { Context } from "../Store/Context";
 
 export const AccountDetailsView = () => {
+  const { state } = useContext(Context);
+
   return (
     <div className="account-details">
       <h3>Account Details:</h3>
@@ -9,15 +12,15 @@ export const AccountDetailsView = () => {
         <CardBody>
           <Row>
             <h5 style={{ paddingRight: "0.3rem" }}>First Name: </h5>
-            John
+            {state.userData.fName.toUpperCase()}
           </Row>
           <Row>
             <h5 style={{ paddingRight: "0.3rem" }}>Last Name: </h5>
-            Doe
+            {state.userData.lName.toUpperCase()}
           </Row>
           <Row>
             <h5 style={{ paddingRight: "0.3rem" }}>Email: </h5>
-            john.doe@gmail.com
+            {state.userData.email.toUpperCase()}
           </Row>
         </CardBody>
       </Card>

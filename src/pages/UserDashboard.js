@@ -4,7 +4,7 @@ import "../css/UserDashboard.css";
 
 import { AccountDetailsView } from "../views/AccountDetailsView";
 import { FavoritesView } from "../views/FavoritesView";
-import { SubmittedFormsViews } from "../views/SubmittedFormsViews";
+import { SubmittedFormsView } from "../views/SubmittedFormsView";
 
 import { Context } from "../Store/Context";
 
@@ -40,7 +40,7 @@ export const UserDashboard = () => {
           <br />
           <FavoritesView />
           <br />
-          <SubmittedFormsViews />
+          <SubmittedFormsView />
         </Container>
       </div>
     </Fragment>
