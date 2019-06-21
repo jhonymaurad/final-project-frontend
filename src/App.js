@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Fragment>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <NavigationBar />
         <div className="App">
           <Switch>
