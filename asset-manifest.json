@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/final-project-frontend/static/css/main.49e5caab.chunk.css",
+    "main.js": "/final-project-frontend/static/js/main.af367504.chunk.js",
+    "main.js.map": "/final-project-frontend/static/js/main.af367504.chunk.js.map",
+    "runtime~main.js": "/final-project-frontend/static/js/runtime~main.c360060d.js",
+    "runtime~main.js.map": "/final-project-frontend/static/js/runtime~main.c360060d.js.map",
+    "static/css/2.d31301e0.chunk.css": "/final-project-frontend/static/css/2.d31301e0.chunk.css",
+    "static/js/2.366cf00f.chunk.js": "/final-project-frontend/static/js/2.366cf00f.chunk.js",
+    "static/js/2.366cf00f.chunk.js.map": "/final-project-frontend/static/js/2.366cf00f.chunk.js.map",
+    "index.html": "/final-project-frontend/index.html",
+    "precache-manifest.b587cad9417f7e1329a48cd31e79e462.js": "/final-project-frontend/precache-manifest.b587cad9417f7e1329a48cd31e79e462.js",
+    "service-worker.js": "/final-project-frontend/service-worker.js",
+    "static/css/2.d31301e0.chunk.css.map": "/final-project-frontend/static/css/2.d31301e0.chunk.css.map",
+    "static/css/main.49e5caab.chunk.css.map": "/final-project-frontend/static/css/main.49e5caab.chunk.css.map",
+    "static/media/about1.jpg": "/final-project-frontend/static/media/about1.d974fb5c.jpg",
+    "static/media/about2.jpg": "/final-project-frontend/static/media/about2.9053a4f1.jpg",
+    "static/media/dog-avatar.png": "/final-project-frontend/static/media/dog-avatar.4f325f55.png",
+    "static/media/nav-logo.png": "/final-project-frontend/static/media/nav-logo.3687f488.png",
+    "static/media/CarouselPet.css": "/final-project-frontend/static/media/slide4.2eb16a64.jpg"
+  }
+}
