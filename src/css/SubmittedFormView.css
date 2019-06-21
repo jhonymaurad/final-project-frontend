@@ -1,0 +1,17 @@
+.user-submitted-card .card {
+  justify-content: center;
+  align-items: center;
+}
+
+.user-submitted-card .card {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  margin: auto;
+}
+
+.user-submitted-card .card-body {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}

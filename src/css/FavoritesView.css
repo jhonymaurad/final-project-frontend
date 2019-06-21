@@ -1,6 +1,4 @@
-.user-favorite-card {
-  display: flex;
-  flex-direction: row;
+.user-favorites .card {
   justify-content: center;
   align-items: center;
 }
@@ -8,13 +6,12 @@
 .user-favorite-card .card {
   background: none;
   border: none;
-  padding: 1rem;
-  min-width: 5rem;
+  padding: 0.5rem;
+  min-width: 10rem;
   max-width: 15rem;
   min-height: 5rem;
   max-height: 15rem;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 }
 
 .user-favorite-card .card-body {
@@ -26,7 +23,7 @@
   position: absolute;
   bottom: 0;
   background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
   transition: 0.5s ease;

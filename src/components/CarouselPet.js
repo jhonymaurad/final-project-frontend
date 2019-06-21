@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Carousel, Button } from "antd";
 import { Container } from "reactstrap";
 import "antd/dist/antd.css";
@@ -10,7 +10,10 @@ import {
   Redirect,
   Link
 } from "react-router-dom";
-const CarouselPet = () => {
+import { Context } from "../Store/Context";
+
+const CarouselPet = props => {
+  const { state } = useContext(Context);
   return (
     <Container>
       <Carousel className="carousel-container" autoplay>
@@ -49,9 +52,18 @@ const CarouselPet = () => {
         <Link to="/adoptDogs">
           <Button ghost>Adopt a Pet</Button>
         </Link>
-        <Link to="/reHome">
-          <Button ghost>Rehome a Pet</Button>
-        </Link>
+        <Button
+          ghost
+          onClick={() => {
+            if (state.isSignedIn) {
+              props.history.push("/reHome");
+            } else {
+              alert("You must be signed in");
+            }
+          }}
+        >
+          Rehome a Pet
+        </Button>
       </div>
     </Container>
   );

@@ -1,10 +1,17 @@
 import React, { Fragment, useContext } from "react";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import {
+  Button,
+  Form,
+  FormGroup,
+  FormFeedback,
+  Label,
+  Input
+} from "reactstrap";
 
 import { Context } from "../Store/Context";
 
 export const RegisterView = ({ props }) => {
-  const { dispatch } = useContext(Context);
+  const { state, dispatch } = useContext(Context);
 
   return (
     <Fragment>
@@ -38,11 +45,30 @@ export const RegisterView = ({ props }) => {
       <Button
         color="primary"
         onClick={() => {
-          dispatch({
-            type: "SIGN_IN",
-            payload: true
-          });
-          props.history.push("/account/");
+          let fName = document.getElementById("registerFname").value;
+          let lName = document.getElementById("registerLname").value;
+          let email = document.getElementById("registerEmail").value;
+          let password = document.getElementById("registerPassword").value;
+          if (fName && lName && email && password) {
+            dispatch({
+              type: "SIGN_IN",
+              payload: true
+            });
+            dispatch({
+              type: "ADD_USER",
+              payload: {
+                fName,
+                lName,
+                email,
+                password,
+                favorites: [],
+                submissions: []
+              }
+            });
+            props.history.push("/account/");
+          } else {
+            alert("Cant leave any field empty");
+          }
         }}
       >
         Register

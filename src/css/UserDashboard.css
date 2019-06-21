@@ -22,7 +22,6 @@
 
 .user-dashboard-container {
   min-height: 100vh;
-  max-height: 200vh;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(
